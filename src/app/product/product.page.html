@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+
+  <ion-content [fullscreen]="true" class="content-container">
+    
+    <ion-list class="ion-margin ion-text-center">
+
+      <ion-list-header><ion-label color="white">Product</ion-label></ion-list-header>
+  
+
+    </ion-list> 
+  
+
+
+    <div class="bg"></div>
+
+    <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+      <!-- <ion-item class="input-item">
+        <ion-input placeholder="user_Id" type="text" name="userId" [(ngModel)]="userId" clearInput="true">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item> -->
+
+  
+
+
+      <ion-item class="input-item">
+       
+        <ion-input  placeholder="product_Name" type="text" name="productName" [(ngModel)]="productName" clearInput="true">
+          <ion-icon name="key-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="input-item">
+        
+        <ion-input  placeholder="product_Code"  type="text" name="code" [(ngModel)]="code" clearInput="true">
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+
+      <ion-item class="input-item">
+       
+        <ion-input placeholder="description" type="text" name="description" [(ngModel)]="description" clearInput="true">
+          <ion-icon name="storefront-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="input-item">
+      
+        <ion-input type="file"  (change)="onFileSelected($event)"  multiple accept="image/*" name="files"   clearInput="true">
+          <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+    
+ 
+
+
+      <div align="center">
+      <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)= "product()" >Submit</ion-button>
+      </div>
+
+
+
+    </div>
+
+  </ion-content>

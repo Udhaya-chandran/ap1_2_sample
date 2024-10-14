@@ -1,0 +1,196 @@
+
+
+
+<!-- menu bar -->
+<!-- <ion-menu side="start" contentId="main-content">
+  <ion-header class="header-item">
+    <ion-toolbar>
+      <ion-title >Welcome</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+
+
+
+ <ion-accordion-group>
+  <ion-accordion >
+    <ion-item  slot="header" class="menu-item" >Vehicle</ion-item>
+
+    <div slot="content">
+      <ion-item class="sub-menu-item" (click)="add()" >Add    <ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item  class="sub-menu-item" (click)="editVehicle()">Edit   <ion-icon name="close-circle-outline" slot="end" ></ion-icon> </ion-item>
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">User</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item" (click)="user()" >Add  <ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item    class="sub-menu-item" (click)="edit()">Edit  <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item>
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">Complaints</ion-item>
+
+    <div slot="content">
+
+      <ion-item   class="sub-menu-item"   (click)="complainAdd()"> Add Complaints  <ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item   class="sub-menu-item"  (click)="editComplaints()">Edit Complaints  <ion-icon name="close-circle-outline"slot="end"></ion-icon></ion-item>
+      <ion-item  class="sub-menu-item" (click)="complain_details()">complain details <ion-icon name="eye-outline" slot="end"></ion-icon></ion-item>
+    
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">Services</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="addService()">Add Service<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item  class="sub-menu-item" (click)="editService()">Edit Service <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item>
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">Products</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="addProduct()">Add product<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+
+     <ion-item  class="sub-menu-item" (click)="editProduct()">Edit product <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item> 
+     <ion-item  class="sub-menu-item" (click)="list()">Product details <ion-icon name="eye-outline" slot="end"></ion-icon></ion-item> 
+    </div>
+  </ion-accordion>
+
+
+  
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">customer</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="addCustomer()">Add customer<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+ 
+     <ion-item  class="sub-menu-item" (click)="editCustomer()">Edit customer <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item> 
+     <ion-item  class="sub-menu-item" (click)="cusList()">Customer details <ion-icon name="eye-outline" slot="end"></ion-icon></ion-item>
+    </div>
+  </ion-accordion>
+
+
+
+
+  
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">booking</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="vehicleBooking()">Booking<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+   
+    </div>
+  </ion-accordion>
+
+ </ion-accordion-group>
+  
+    
+    
+
+  </ion-content> -->
+
+
+  <!-- footer -->
+  <!-- <ion-footer class="footer" >
+    <ion-item class="footer-item" (click)="profile()">Profile <ion-icon  name="person-circle-outline" slot="end" ></ion-icon></ion-item>
+     
+   
+  </ion-footer>
+</ion-menu> -->
+
+
+
+<!-- home page -->
+
+  <ion-header>
+    <ion-toolbar>
+
+      <ion-title align="center">Vehicle Details</ion-title>
+
+      <ion-buttons slot="start">
+        <!-- <ion-menu-button></ion-menu-button> -->
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header> 
+
+
+
+
+
+
+<ion-content [fullscreen]="true" class="main"> 
+
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)"> 
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+
+
+ 
+  <ion-card  *ngFor = " let details of data"> 
+    <ion-card-content>
+      <ion-grid class="card-grid">
+        <ion-row>
+       
+          <ion-col size="6" class="left-col">
+            <div class="container">
+              <span class="text">Vehicle Id </span><br>
+              <span class="text">Model Id </span><br> 
+              <span class="text">Model Name </span><br>
+              <span class="text">Chassis Number <br></span>
+               <span class="text">Company Id</span><br> 
+              <span class="text">UserName</span><br>
+              <span class="text">Address</span><br>
+              <span class="text">Email</span><br>
+              <span class="text">Phone Number</span><br>
+              <span class="text">Date Time</span><br> 
+              <span class="text">Registration Number</span><br>
+            </div>
+          </ion-col>
+       
+
+          <ion-col size="6" class="right-col">
+            <div class="container">
+          
+              <ion-text>{{details.vehicle_id}}</ion-text><br>
+              <ion-text>{{details.vehicle_model_id}}</ion-text><br>
+              <ion-text>{{details.vehicle_model_name}}</ion-text><br>
+              <ion-text class="small-text">{{details.chassis_number}}</ion-text><br>
+             <ion-text>{{details.company_id}}</ion-text><br>
+              <ion-text>{{details.username}}</ion-text><br>
+              <ion-text>{{details.address}}</ion-text><br>
+              <ion-text>{{details.email}}</ion-text><br>
+              <ion-text class="small-text">{{details.phone_number}}</ion-text><br>
+              <ion-text class="small-text">{{details.date_time}}</ion-text> <br>
+              <ion-text>{{details.registration_number}}</ion-text><br>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card> 
+
+  <!-- <ion-button  class="round-button" shape="round">Complints</ion-button> -->
+</ion-content>
+
+
+
+
+
+
+

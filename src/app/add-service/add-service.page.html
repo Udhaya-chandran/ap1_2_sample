@@ -1,0 +1,108 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar> 
+</ion-header>
+
+
+
+
+
+  <ion-content [fullscreen]="true" class="content-container">
+    
+    <ion-list class="ion-margin ion-text-center">
+
+      <ion-list-header><ion-label color="light">Service</ion-label></ion-list-header>
+  
+
+    </ion-list> 
+  
+
+
+    <div class="bg"></div>
+
+    <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+      <!-- <ion-item class="input-item">
+        <ion-input placeholder="user_id" type="text" name="user_id" [(ngModel)]="userId" clearInput="true">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item> -->
+
+
+      <ion-item class="input-item">
+       
+        <ion-input  placeholder="vehicle Id" type="text" name="vehicle_id" [(ngModel)]="vehicleId" clearInput="true">
+          <ion-icon name="key-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">Date</ion-label>
+        <ion-datetime-button slot="end" datetime="date"></ion-datetime-button>
+      </ion-item>
+      
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="date" presentation="date" name="date" [(ngModel)]="date" (ionChange)="change($event)"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+      
+
+
+
+      <ion-item>
+        <ion-label position="fixed">Time</ion-label>
+        <ion-datetime-button slot="end" datetime="time"></ion-datetime-button>
+      </ion-item>
+      
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="time" presentation="time" name="time" [(ngModel)]="time" (ionChange)="change($event)"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+      
+
+      
+
+      <ion-item class="input-item">
+      
+        <ion-input type="text"  placeholder="service center " name="service_planned_type" [(ngModel)]="type" clearInput="true">
+          <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+     
+      <ion-item class="input-item">
+     
+        <ion-input   placeholder="Remarks" type="text" name="service_planned_remarks" [(ngModel)]="remarks" clearInput="true">
+          <ion-icon name="id-card-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item class="input-item">
+     
+        <ion-input   placeholder="Service_number" type="number" name="vehicle_service_number" [(ngModel)]="number" clearInput="true">
+          <ion-icon name="id-card-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+ 
+ 
+
+
+      <div align="center">
+      <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)="vehicleService()" >Submit</ion-button>
+      </div>
+
+
+
+    </div>
+
+  </ion-content>
+

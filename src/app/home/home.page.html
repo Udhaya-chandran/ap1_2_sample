@@ -1,0 +1,73 @@
+
+<ion-content [fullscreen]="true">
+
+  <div id= bg>
+  
+    <ion-fab vertical="bottom" edge horizontal="center" slot="fixed">
+  
+  <ion-fab-button color="light" >
+        <ion-icon name="close-outline" color="medium"></ion-icon>
+  </ion-fab-button>
+  </ion-fab>
+    
+  </div>
+  
+  <ion-list lines="none" class="ion-margin">
+  
+    <ion-list-header>WELCOME !</ion-list-header>
+
+
+
+    <ion-item class="ion-margin"  [class.error]="isUnameError">
+      <ion-input placeholder="Enter UserName" type="text" clearInput="true" [(ngModel)]="uname" (input)="removeError()"></ion-input>
+    </ion-item>
+    <div *ngIf="isUnameError" class="error-message"></div>
+
+
+
+
+
+    <ion-item class="ion-margin"  [class.error]="isPasswordError">
+      <ion-input placeholder="Enter Password" type="Password" clearInput="true" [(ngModel)]="password" (input)="removeError()"></ion-input>
+    </ion-item>
+    <div *ngIf="isPasswordError" class="error-message"></div>
+  
+
+
+    <ion-text color="medium"><p  class="ion-margin">Already have an account? SignUp</p></ion-text>
+  
+    <div align="center">
+      <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)="login()">LogIn
+        <ion-icon name="log-in" slot="end"></ion-icon>
+      </ion-button>
+    </div>
+  
+  </ion-list>
+
+
+
+
+  <!--   <ion-card *ngFor="let article of data">
+      <img [src]="article.urlToImage">
+      <ion-card-header>
+        <ion-card-subtitle>{{article.author}}***{{article.publishedAt}}</ion-card-subtitle>
+        <ion-card-title>
+          <h1>{{article.title}}</h1>
+        </ion-card-title>
+  
+      </ion-card-header>
+  
+      <ion-card-content>
+        {{article.description}}
+      </ion-card-content>
+    </ion-card> -->
+
+  </ion-content>
+  
+
+
+
+
+
+  
+

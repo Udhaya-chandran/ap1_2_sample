@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar> 
+</ion-header>
+<ion-content [fullscreen]="true" class="content-container">
+
+
+  <ion-list class="ion-margin ion-text-center">
+
+    <ion-list-header>
+      <ion-label color="light">Edit Complaint</ion-label>
+    </ion-list-header>
+
+
+  </ion-list> 
+
+
+
+  <div class="bg">
+
+  </div>
+
+  <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+<!-- 
+    <ion-item class="input-item">
+      <ion-input type="number" name="user_Id"  placeholder="user_Id"  [(ngModel)]="userId"   clearInput="true">
+        
+      </ion-input>
+    </ion-item> -->
+
+    <ion-item class="input-item">
+      
+      <ion-input type="text" name="chasis_number" placeholder="Chasis Number"    [(ngModel)]=" chassisNumber"  clearInput="true">
+       
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+    
+      <ion-input type="text" name="complaint_type"  placeholder="Complaint Type"   [(ngModel)]="complainType" clearInput="true"> 
+  
+      
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-input type="text" name="complaint_remark" placeholder="Remark"   [(ngModel)]="complainRemark" clearInput="true"> 
+       
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-input type="text" name="id" placeholder="id"   [(ngModel)]="id" clearInput="true"> 
+       
+      </ion-input>
+    </ion-item>
+
+
+    <div align="center">
+    <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)="editComplain()" >Submit</ion-button>
+    </div>
+
+
+
+  </div>
+
+</ion-content>
+

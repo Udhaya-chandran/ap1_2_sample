@@ -1,0 +1,36 @@
+ion-content {
+    // --background:  #f4f5f8;
+
+    --background: url('/assets/img/dark.jpg')no-repeat center center/cover; 
+  }
+
+
+  
+
+ion-card{
+  box-shadow: none;
+  border-radius: 20px;
+  background-color: rgba(250, 250, 250, 0.3);
+  // backdrop-filter: blur(8px);
+  transform:translateY(10%);
+
+}
+
+
+.container {
+  color: rgb(255, 255, 255); /* Change the text color to black */
+
+}
+
+.small-text {
+  font-size: 12px; /* Adjust the font size as needed */
+}
+
+
+
+
+
+ion-header ion-toolbar {
+  --background:#00203FFF; 
+  color: #ADEFD1FF; 
+}

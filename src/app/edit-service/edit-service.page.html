@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+<ion-content [fullscreen]="true" class="content-container">
+
+
+  <ion-list class="ion-margin ion-text-center">
+
+    <ion-list-header>
+      <ion-label color="light">Edit Service</ion-label>
+    </ion-list-header>
+
+
+  </ion-list> 
+
+
+
+  <div class="bg">
+
+  </div>
+
+  <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+    <!-- <ion-item class="input-item">
+      <ion-input type="number" name="user_Id"  placeholder="user_Id"  [(ngModel)]="userId"   clearInput="true">
+        
+      </ion-input>
+    </ion-item> -->
+
+    <ion-item class="input-item">
+      
+      <ion-input type="text" name="service_id" placeholder="Service Id"    [(ngModel)]=" serviceId"  clearInput="true">
+       
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="fixed">Date</ion-label>
+      <ion-datetime-button slot="end" datetime="date"></ion-datetime-button>
+    </ion-item>
+    
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="date" presentation="date" name="date" [(ngModel)]="date" ></ion-datetime>
+      </ng-template>
+    </ion-modal>
+
+
+
+
+    
+
+    <ion-item>
+      <ion-label position="fixed">Time</ion-label>
+      <ion-datetime-button slot="end" datetime="time"></ion-datetime-button>
+    </ion-item>
+    
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="time" presentation="time" name="time" [(ngModel)]="time" ></ion-datetime>
+      </ng-template>
+    </ion-modal>
+    
+
+    <ion-item class="input-item">
+      <ion-input type="text" name="service_planned_type" placeholder="service_Center"   [(ngModel)]="serviceCenter" clearInput="true"> 
+       
+      </ion-input>
+    </ion-item>
+
+
+    <div align="center">
+    <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)="editComplain()" >Submit</ion-button>
+    </div>
+
+
+
+  </div>
+
+</ion-content>
+

@@ -1,0 +1,95 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+<ion-content [fullscreen]="true" class="content-container">
+
+  <!-- <div class="img-container">
+    <img src="assets\icon\bnc.png" alt="bnc" class="img">
+  </div> -->
+  <ion-list class="ion-margin ion-text-center">
+
+    <ion-list-header><ion-label color="light">Edit vehicle</ion-label></ion-list-header>
+
+
+  </ion-list> 
+
+
+
+  <div class="bg"></div>
+
+  <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+<!-- 
+    <ion-item class="input-item">
+      <ion-input placeholder="UserId" type="number" name="userId" [(ngModel)]="userId" clearInput="true">
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      </ion-input>
+    </ion-item> -->
+
+    <ion-item class="input-item">
+      <ion-input placeholder="Vehicle Id" type="text" name="vehicle_id" [(ngModel)]="vehicleId" clearInput="true">
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+
+    
+    <ion-item class="input-item">
+     
+      <ion-input  placeholder="Model Id" type="text" name="vehicle_model_id" [(ngModel)]="modelId" clearInput="true">
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item class="input-item">
+     
+      <ion-input  placeholder="Model Name" type="text" name="vehicle_model_name" [(ngModel)]="modelName" clearInput="true">
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item class="input-item">
+      
+      <ion-input  placeholder="Chasis Number"  name="chasNumber" [(ngModel)]="chasNumber" clearInput="true">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+
+
+    
+    <ion-item class="input-item">
+     
+      <ion-input placeholder="Imei" type="text" name="imei" [(ngModel)]="imei" clearInput="true">
+        <ion-icon name="storefront-outline" slot="start"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item class="input-item">
+    
+      <ion-input   placeholder="Registration Number" type="number"  name="registration_number" [(ngModel)]="regNum" clearInput="true">
+        <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+      </ion-input>
+    </ion-item>
+
+ 
+
+
+    <div align="center">
+    <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)="edit()" >Submit</ion-button>
+    </div>
+
+
+
+  </div>
+
+</ion-content>
+

@@ -1,0 +1,90 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-title >Customer Details</ion-title> 
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-button  (click)="complain()" slot="end" fill="clear">     
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button> -->
+  </ion-toolbar> <!-- <ion-title>complain_details</ion-title> -->
+
+
+
+
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="main"> 
+
+  
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)"> 
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  
+ 
+  <ion-card  *ngFor = " let details of data"> 
+    <ion-card-content>
+      <ion-grid class="card-grid">
+        <ion-row>
+       
+          <ion-col size="6" class="left-col">
+            <div class="container">
+              <span class="text">id </span><br>
+              <span class="text">customer_name </span><br>
+              <span class="text">address </span><br>
+              <span class="text">city_name <br></span>
+              <span class="text">state_name</span><br><br>
+              <span class="text">country_name</span><br><br>
+      
+
+              <span class="text">created_by</span><br>
+              <span class="text">created_by_name</span><br>
+              <span class="text">created_datetime</span><br>
+              <span class="text">modified_by</span><br>
+              <span class="text">modified_by_name</span><br>
+              <span class="text">modified_datetime</span><br>
+         
+    
+ 
+            </div>
+          </ion-col>
+       
+
+          <ion-col size="6" class="right-col">
+            <div class="container">
+          
+              <ion-text class="small-text">{{details.id}}</ion-text><br>
+              <ion-text class="small-text">{{details.customer_name}}</ion-text><br>
+              <ion-text class="small-text">{{details.address}}</ion-text><br>
+              <ion-text class="small-text">{{details.city_name}}</ion-text><br>
+          
+    
+              <ion-text class="small-text">{{details.state_name}}</ion-text><br><br>
+              <ion-text class="small-text">{{details.country_name}}</ion-text><br><br>
+     
+              <ion-text class="small-text">{{details.created_by}}</ion-text><br>
+              <ion-text class="small-text">{{details.created_by_name}}</ion-text><br>
+              <ion-text class="small-text">{{details.created_datetime}}</ion-text><br>
+              <ion-text class="small-text">{{details.modified_by}}</ion-text><br>
+              <ion-text class="small-text">{{details.modified_by_name}}</ion-text><br>
+              <ion-text class="small-text">{{details.modified_datetime}}</ion-text><br>
+           
+              
+            </div>
+          </ion-col> 
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card> 
+  
+</ion-content>
+
+
+
+
+
+
+

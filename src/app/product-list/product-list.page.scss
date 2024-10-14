@@ -1,0 +1,102 @@
+.main {
+
+
+  --background: url('/assets/img/dark.jpg')no-repeat center center/cover; 
+ }
+ 
+ 
+ 
+ 
+ ion-card{
+ box-shadow: none;
+ border-radius: 20px;
+ background-color: rgba(255,255,255,0.3);
+ // backdrop-filter: blur(8px);
+ transform:translateY(10%);
+ 
+ }
+ 
+ 
+ .container {
+ color: rgb(255, 255, 255); /* Change the text color to black */
+ }
+ 
+ .small-text {
+   font-size: 14px; /* Adjust the font size as needed */
+ }
+ 
+  
+//  .text {
+//   font-size: 15px; /* Adjust the font size as needed */
+// }
+
+ 
+ 
+ 
+ 
+ /* Menu styling */
+ .menu-item {
+   --background:rgb(255, 255, 255); /* Background color of the menu item */
+   color: rgb(0, 0, 0); /* Text color of the menu item */
+   
+ }
+ 
+ .sub-menu-item {
+   --background: #efdecd; /* Background color of the submenu items */
+   color:rgb(0, 0, 0); /* Text color of the submenu items */
+ }
+ 
+ 
+ 
+ ion-icon{
+   color:red;
+ }
+ 
+ 
+
+  ion-header ion-toolbar {
+   --background:#00203FFF; 
+   color: #ADEFD1FF; 
+ }
+ 
+
+
+ .preview-container {
+  width: 20px; /* Set the desired width */
+  // height: 50px; /* Set the desired height */
+   overflow: hidden;
+}
+
+.small-text {
+  font-size: 15px; /* Adjust the font size as needed */
+}
+
+
+.full-screen-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.full-screen-preview img {
+  max-width: 100%;
+  max-height:100%;
+
+  object-fit: cover;
+}
+
+
+.close-icon {
+  position: absolute;
+  margin-bottom: 80%;
+  right: 10px;
+  color: rgb(235, 0, 0);
+  font-size: 30px;
+}

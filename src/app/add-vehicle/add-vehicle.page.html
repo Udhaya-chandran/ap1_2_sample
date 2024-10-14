@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar> 
+</ion-header>
+    <ion-content [fullscreen]="true" class="content-container">
+      <ion-list class="ion-margin ion-text-center">
+
+        <ion-list-header>
+          <ion-label color="light">Vehicle</ion-label>
+        </ion-list-header>
+    
+
+      </ion-list> 
+    
+
+
+      <div class="bg">
+
+      </div>
+
+      <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+
+
+
+        <ion-item class="input-item">
+          <ion-input type="text" name="User_Name" placeholder="User Name"  [(ngModel)]="uname" clearInput="true" > 
+            <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          
+          <ion-input type="email" name="email" placeholder="Email"  [(ngModel)]="email" clearInput="true" > 
+            <ion-icon name="mail-outline" slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+        
+          <ion-input type="number"  placeholder="Phone Number" name="Phone_Number" [(ngModel)]="number" clearInput="true">
+            <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+        
+          <ion-input type="text" name="Address"   placeholder="Address"      [(ngModel)]="address" clearInput="true" > 
+            <ion-icon name="storefront-outline" slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+      
+          <ion-input type="text" name="Vehicle_Id" placeholder="Vehicle Model Id"   [(ngModel)]="vehicleId"  clearInput="true"> 
+
+            <ion-icon name="bicycle-outline"  slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+  
+        <ion-item class="input-item">
+        
+          <ion-input type="text" name="Vehicle_Name"  placeholder="Vehicle Model Name"  [(ngModel)]="vehicleName" clearInput="true"> 
+            <ion-icon name="bicycle-outline"  slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+
+        <ion-item class="input-item">
+        
+          <ion-input type="text" name="Chassis_Number" placeholder="Chassis Number"  [(ngModel)]="chassisNumber" clearInput="true"> 
+            <ion-icon name="bicycle-outline"  slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+
+        <ion-item class="input-item">
+        
+          <ion-input type="text" name="imei"  placeholder="Imei"    [(ngModel)]="imei" clearInput="true" > 
+            <ion-icon name="bicycle-outline"  slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+
+        <ion-item class="input-item">
+        
+          <ion-input type="text" name="Register_Number"  placeholder="Register Number" [(ngModel)]="regNum"  clearInput="true"> 
+            <ion-icon name="newspaper-outline"  slot="start"></ion-icon>
+          </ion-input>
+        </ion-item>
+
+
+        <!-- <ion-item class="input-item">
+          <ion-input type="text" name="ID" placeholder="userId" [(ngModel)]="id"  clearInput="true" > 
+            <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+          </ion-input>
+        </ion-item> -->
+
+        <div align="center">
+        <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)="vehicle()" >Submit</ion-button>
+        </div>
+
+
+  
+      </div>
+
+    </ion-content>
+

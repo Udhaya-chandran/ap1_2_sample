@@ -1,0 +1,56 @@
+
+ion-header ion-toolbar {
+  --background:#00203FFF; 
+  color: #ADEFD1FF; 
+}
+
+
+ion-content{
+  --background: url('/assets/img/dark.jpg')no-repeat center center/cover; 
+    
+    }
+  
+  ion-list{
+    transform:translateY(1vh);
+    background: transparent;
+  }
+    ion-list-header {
+      margin-bottom: 5vh;
+      letter-spacing: 3px;
+    }
+  
+    ion-label{
+      font-weight: bold;
+      font-size: 2rem;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+  
+  
+  
+  // .bg {
+  //   height: 37%;
+  //   width: 500px;
+  //   // background: var(--ion-color-dark) url('/assets/img/leaf2.jpg') no-repeat center center/cover;
+  //   border-radius: 0 0 100% 0%;
+  //   margin-left: -3vw;
+  //   position: relative;
+  // }
+  
+  ion-item{
+    border: 1px solid var(--ion-color-light);
+    border-radius: 20px;
+    -webKit-box-shadow:0 6px 4px -4px var(--ion-color-medium);
+    -moz-box-shadow:0 6px 4px -4px var(--ion-color-medium);
+    box-shadow:0 6px 4px -4px var(--ion-color-medium);
+    margin-bottom: 15px;
+    
+  }
+  
+  
+  ion-icon{
+    font-size: 1.0em;
+  }
+  
+  
+  
+  

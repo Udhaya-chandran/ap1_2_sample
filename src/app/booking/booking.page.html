@@ -1,0 +1,159 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+<ion-content [fullscreen]="true" class="content-container">
+
+
+  <ion-list class="ion-margin ion-text-center">
+
+    <ion-list-header>
+      <ion-label color="light">booking</ion-label>
+    </ion-list-header>
+
+
+  </ion-list> 
+
+
+
+  <div class="bg">
+
+  </div>
+
+  <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+    <!-- <ion-item class="input-item">
+      <ion-input type="number" name="user_Id"  placeholder="user_Id"  [(ngModel)]="userid"   clearInput="true">
+        
+      </ion-input>
+    </ion-item>  -->
+
+
+
+
+
+
+
+  <ion-item class="input-item">
+      <ion-label>Choose Customer</ion-label>
+      <ion-select name="customer_name" placeholder="Customer Name" [(ngModel)]="selectedCustomerName" (ionChange)="convertToCustomerId()">
+        <ion-select-option *ngFor="let item of customerData" [value]="item.customer_name">
+          {{ item.customer_name }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item> 
+
+
+
+    
+<!-- 
+    <ion-item class="input-item">
+    
+      <ion-input type="text" name="Date"  placeholder="custId" [(ngModel)]="custId" clearInput="true"> 
+  
+      
+      </ion-input>
+    </ion-item> 
+
+    
+    
+
+    <ion-item class="input-item">
+    
+      <ion-input type="text" name="Date"  placeholder="vehicleId" [(ngModel)]="vehicleId" clearInput="true"> 
+  
+      
+      </ion-input>
+    </ion-item>  -->
+
+
+
+    <ion-item class="input-item">
+      <ion-label>Vehicle Number</ion-label>
+      <ion-select name="Vehicle_Number" placeholder="Vehicle Number" [(ngModel)]="selectVehicleNumber" (ionChange)="convertToVehicleId()">
+        <ion-select-option *ngFor="let item of vehicleData" [value]="item.registration_number">
+          {{ item.registration_number }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    
+
+
+    <!-- <ion-item class="input-item">
+    
+      <ion-datetime [(ngModel)]="date"></ion-datetime>
+  
+
+    </ion-item>  -->
+<!-- 
+   <ion-item>
+      <ion-label position="fixed">Date</ion-label>
+      <ion-datetime-button slot="end" datetime="date" [(ngModel)]="date" ></ion-datetime-button>
+      </ion-item>
+     
+
+      <ion-modal [keepContentsMounted]="true"  >
+        <ng-template>
+          <ion-datetime id="date" presentation="date" [(ngModel)]="date"  (ionChange)="change($event)"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+       -->
+
+       <ion-item>
+        <ion-label position="fixed">Date</ion-label>
+        <ion-datetime-button slot="end" datetime="date"></ion-datetime-button>
+      </ion-item>
+      
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="date" presentation="date" name="date" [(ngModel)]="date" (ionChange)="change($event)"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+      
+      
+    
+    
+
+    <ion-item class="input-item">
+    
+      <ion-input type="text" name="dealer_name"  placeholder="dealer_name"   [(ngModel)]="dealerName" clearInput="true"> 
+  
+      
+      </ion-input>
+    </ion-item>
+
+    <ion-item class="input-item">
+      <ion-input type="number" name="vehicle_price" placeholder="vehicle_price"   [(ngModel)]="price" clearInput="true"> 
+       
+      </ion-input>
+    </ion-item>
+
+
+    <div align="center">
+    <ion-button shape="round" strong="true" class="ion-margin" color="light" (click)="book()" >Submit</ion-button>
+    </div>
+
+
+
+  </div>
+
+ 
+    <!-- Your existing content here -->
+  
+    <!-- Your existing form inputs here -->
+  
+    <!-- Dropdown to display fetched vehicle data -->
+
+  
+
+
+
+
+
+</ion-content>
+

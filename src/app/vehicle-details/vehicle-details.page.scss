@@ -1,0 +1,81 @@
+.main {
+
+
+   --background: url('/assets/img/dark.jpg')no-repeat center center/cover; 
+}
+
+
+
+
+ion-card{
+box-shadow: none;
+border-radius: 20px;
+background-color: rgba(255,255,255,0.3);
+// backdrop-filter: blur(8px);
+transform:translateY(10%);
+
+}
+
+
+.container {
+color: rgb(255, 255, 255); /* Change the text color to black */
+}
+
+.small-text {
+  font-size: 11px; /* Adjust the font size as needed */
+}
+
+
+// .text {
+//   font-size: 11px; /* Adjust the font size as needed */
+// }
+
+
+
+
+
+/* Menu styling */
+.menu-item {
+  --background: rgb(255, 255, 255);  /* Background color of the menu item */
+  color: rgb(0, 0, 0); /* Text color of the menu item */
+  
+}
+
+.sub-menu-item {
+  --background: #00203FFF; /* Background color of the submenu items */
+  color: #ADEFD1FF;  /* Text color of the submenu items */
+}
+
+
+
+ion-icon{
+  color : #ADEFD1FF; 
+}
+
+
+
+.footer-item {
+  --background:#00203FFF; 
+  color: #ADEFD1FF; 
+}
+
+/* Menu bar header styling */
+
+
+// ion-menu ion-content {
+
+//   --background: url('/assets/img/dark.jpg')no-repeat center center/cover; 
+// }
+
+ion-menu ion-header ion-toolbar {
+  --background:#00203FFF; 
+  color: #ADEFD1FF; 
+
+}
+
+
+
+ion-header ion-toolbar {
+  --background:#00203FFF; 
+  color: #ADEFD1FF; 
+}

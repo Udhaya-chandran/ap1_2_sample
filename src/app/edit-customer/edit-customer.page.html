@@ -1,0 +1,100 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar> 
+</ion-header>
+
+
+
+
+
+
+
+  <ion-content [fullscreen]="true" class="content-container">
+    
+    <ion-list class="ion-margin ion-text-center">
+
+      <ion-list-header><ion-label color="light">Edit Customer</ion-label></ion-list-header>
+  
+
+    </ion-list> 
+  
+
+
+    <div class="bg"></div>
+
+    <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+      <!-- <ion-item class="input-item">
+        <ion-input placeholder="user ID" type="text" name="userId" [(ngModel)]="userId" clearInput="true">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item> -->
+
+
+      <ion-item class="input-item">
+       
+        <ion-input  placeholder="customer ID" type="number" name="cusName" [(ngModel)]="cusId" clearInput="true">
+          <ion-icon name="key-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item class="input-item">
+       
+        <ion-input  placeholder="Name" type="text" name="cusName" [(ngModel)]="cusName" clearInput="true">
+          <ion-icon name="key-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+
+
+      <ion-item class="input-item">
+       
+        <ion-input placeholder="Address" type="text" name="Address" [(ngModel)]="address" clearInput="true">
+          <ion-icon name="storefront-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item class="input-item">
+       
+        <ion-input placeholder="city" type="text" name="city" [(ngModel)]="city" clearInput="true">
+          <ion-icon name="storefront-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item class="input-item">
+      
+        <ion-input type="text"  placeholder="state" name="state" [(ngModel)]="state"  clearInput="true">
+          <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+     
+      <ion-item class="input-item">
+     
+        <ion-input   placeholder="country" type="text" name="country" [(ngModel)]="country" clearInput="true">
+          <ion-icon name="id-card-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+ 
+ 
+
+
+      <div align="center">
+      <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)=" editCustomer()" >Submit</ion-button>
+      </div>
+
+
+
+    </div>
+
+  </ion-content>
+

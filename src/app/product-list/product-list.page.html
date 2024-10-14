@@ -1,0 +1,114 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+    <ion-title >Product Details</ion-title> 
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar> 
+</ion-header>
+
+
+ <ion-content [fullscreen]="true" class="main"> 
+
+
+  
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)"> 
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  
+  <ion-card   *ngFor="let details of data; let i = index"> 
+    <ion-card-content>
+      <ion-grid class="card-grid">
+        <ion-row>
+          <ion-col size="6" class="left-col">
+            <div class="container">
+              <!-- <span class="text">Id </span><br>
+              <span class="text">Name </span><br>
+              <span class="text">Code </span><br>
+              <span class="text">Description <br></span> <br>
+              <span class="text">Image1</span><br><br>
+              <span class="text">Image2</span><br><br>
+               <span class="text">Created By</span><br>
+              <span class="text">Created DateTime</span><br>
+              <span class="text">Modified By</span><br>
+              <span class="text">Modified By</span><br>
+              <span class="text">Modified DateTime</span><br>
+     -->
+
+              <ion-text class="small-text">Id</ion-text> <br> 
+              <ion-text class="small-text">Name</ion-text><br> 
+              <ion-text class="small-text">Code</ion-text> <br> <br>
+              <ion-text class="small-text">Description</ion-text> <br> <br> <br> <br>
+              <ion-text class="small-text">Image1</ion-text> <br>
+
+
+
+              <ion-text class="small-text">Image2</ion-text> <br> <br> <br>
+               <ion-text class="small-text">Created By</ion-text> <br>
+               <ion-text class="small-text">Created DateTime</ion-text> <br> <br>
+
+
+
+
+
+  
+      
+
+            </div>
+          </ion-col>
+       
+
+          <ion-col size="6" class="right-col">
+            <div class="container">
+          
+              <ion-text class="small-text">{{details.id}}</ion-text><br>
+              <ion-text class="small-text">{{details.product_name}}</ion-text><br>
+              <ion-text class="small-text">{{details.product_code}}</ion-text><br> <br>
+              <ion-text class="small-text">{{details.product_description}}</ion-text><br> <br> <br>
+
+       
+
+     
+           
+                  <div class="preview-container" (click)="viewFullScreen(details.product_image1, i)">
+                    <img [src]="details.product_image1" alt="."> 
+                  </div> 
+            
+                  <div class="preview-container" (click)="viewFullScreen(details.product_image2, i)">
+                    <img [src]="details.product_image2" alt=".">
+                  </div>  <br>
+         
+              <!--  
+                <div *ngIf="FullScreenIndex !== null" class="full-screen-preview">
+                  <ion-icon name="close-circle-outline" class="close-icon" (click)="closeFullScreen()"></ion-icon>
+                  <img [src]="FilePreview" alt="Full Screen Preview">
+                </div> -->
+
+
+                <div *ngIf="details.FullScreenIndex !== null" class="full-screen-preview">
+                  <ion-icon name="close-circle-outline" class="close-icon" (click)="closeFullScreen(i)"></ion-icon>
+                  <img [src]="details.FilePreview" alt="Full Screen Preview">
+                </div>
+
+              
+              <!-- <ion-img [src]="details.product_image2"></ion-img> -->
+             <ion-text class="small-text">{{details.created_by_name}}</ion-text> <br>
+              <ion-text class="small-text">{{details.created_datetime}}</ion-text> <br>
+
+           
+              
+            </div>
+          </ion-col> 
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  </ion-content> 
+
+
+
+

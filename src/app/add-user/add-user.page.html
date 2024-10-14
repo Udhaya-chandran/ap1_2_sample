@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar class="transparent-toolbar">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar> 
+</ion-header>
+
+
+
+
+
+  <ion-content [fullscreen]="true" class="content-container">
+    
+    <ion-list class="ion-margin ion-text-center">
+
+      <ion-list-header><ion-label color="light">User</ion-label></ion-list-header>
+  
+
+    </ion-list> 
+  
+
+
+    <div class="bg"></div>
+
+    <div class="form-container" style="padding-left: 10%; padding-right: 10%;">
+
+      <ion-item class="input-item">
+        <ion-input placeholder="UserName" type="text" name="UserName" [(ngModel)]="uname" clearInput="true">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item class="input-item">
+       
+        <ion-input  placeholder="Password" type="password" name="Password" [(ngModel)]="password" clearInput="true">
+          <ion-icon name="key-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="input-item">
+        
+        <ion-input  placeholder="Email"  type="email" name="Email" [(ngModel)]="email" clearInput="true">
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+
+
+      <ion-item class="input-item">
+       
+        <ion-input placeholder="Address" type="text" name="Address" [(ngModel)]="address" clearInput="true">
+          <ion-icon name="storefront-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="input-item">
+      
+        <ion-input  placeholder="Phone Number"  type="number" name="Phone_Number" [(ngModel)]="number"  clearInput="true">
+          <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+     
+      <ion-item class="input-item">
+     
+        <ion-input   placeholder="Company ID" type="text" name="Company_ID" [(ngModel)]="companyId" clearInput="true">
+          <ion-icon name="id-card-outline" slot="start"></ion-icon>
+        </ion-input>
+      </ion-item>
+ 
+ 
+
+
+      <div align="center">
+      <ion-button shape="round" strong="true" class="ion-margin" color="dark" (click)="add()" >Submit</ion-button>
+      </div>
+
+
+
+    </div>
+
+  </ion-content>
+

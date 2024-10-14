@@ -1,0 +1,324 @@
+
+
+
+<!-- menu bar -->
+<ion-menu side="start" contentId="main-content" >
+  <ion-header class="header-item">
+    <ion-toolbar>
+      <ion-title >Welcome</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+
+
+
+ <ion-accordion-group>
+  <ion-accordion >
+   <ion-item  slot="header" class="menu-item" >Vehicle   </ion-item>  
+
+    <div slot="content">
+      <ion-item class="sub-menu-item" (click)="add()" >Add    <ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item  class="sub-menu-item" (click)="editVehicle()">Edit   <ion-icon name="close-circle-outline" slot="end" ></ion-icon> </ion-item>
+      <ion-item  class="sub-menu-item" (click)="VehicleDetails()">Vehicle details <ion-icon name="close-circle-outline" slot="end" ></ion-icon> 
+      </ion-item>
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">User</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item" (click)="user()" >Add  <ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item    class="sub-menu-item" (click)="edit()">Edit  <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item>
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">Complaints  </ion-item>
+
+    <div slot="content">
+
+      <ion-item   class="sub-menu-item"   (click)="complainAdd()"> Add Complaints  <ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item   class="sub-menu-item"  (click)="editComplaints()">Edit Complaints  <ion-icon name="close-circle-outline"slot="end"></ion-icon></ion-item>
+      <ion-item  class="sub-menu-item" (click)="complain_details()">complain details <ion-icon name="eye-outline" slot="end"></ion-icon></ion-item>
+    
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">Services</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="addService()">Add Service<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+      <ion-item  class="sub-menu-item" (click)="editService()">Edit Service <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item>
+    </div>
+  </ion-accordion>
+
+
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">Products </ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="addProduct()">Add product<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+
+     <ion-item  class="sub-menu-item" (click)="editProduct()">Edit product <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item> 
+     <ion-item  class="sub-menu-item" (click)="list()">Product details <ion-icon name="eye-outline" slot="end"></ion-icon></ion-item> 
+    </div>
+  </ion-accordion>
+
+
+  
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">customer  </ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="addCustomer()">Add customer<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+ 
+     <ion-item  class="sub-menu-item" (click)="editCustomer()">Edit customer <ion-icon name="close-circle-outline" slot="end"></ion-icon></ion-item> 
+     <ion-item  class="sub-menu-item" (click)="cusList()">Customer details <ion-icon name="eye-outline" slot="end"></ion-icon></ion-item>
+    </div>
+  </ion-accordion>
+
+
+
+
+  
+  <ion-accordion>
+    <ion-item slot="header" class="menu-item">booking</ion-item>
+
+    <div slot="content">
+      <ion-item  class="sub-menu-item"  (click)="vehicleBooking()">Booking<ion-icon name="add-circle-outline" slot="end"></ion-icon></ion-item>
+   
+    </div>
+  </ion-accordion>
+
+ </ion-accordion-group>
+
+    
+
+  </ion-content>
+
+ <ion-footer class="footer" >
+    <!-- <ion-item class="footer-item" (click)="profile()">Profile <ion-icon  name="person-circle-outline" slot="end" ></ion-icon></ion-item> -->
+    <ion-item class="footer-item" (click)="logout()">Logout <ion-icon name="log-out-outline" slot="end"> </ion-icon></ion-item>
+                  
+   
+  </ion-footer>
+
+</ion-menu>
+
+
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+  
+    </ion-buttons>
+ 
+  </ion-toolbar>
+</ion-header>
+
+<div class="main-content-div">
+  
+  <div class="ion-page" id="main-content">
+    <ion-content>
+
+      <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)"> 
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+  
+      
+      
+      <div class="main-content-div">
+
+        <div class="user-div">
+          <div class="first-div">
+
+            <ion-label class="welcome">Welcome</ion-label>
+            <ion-label class="username">Admin</ion-label>
+          </div>
+
+          <!-- <div class="user-back" [style.backgroundImage]="'url(assets/img/profile3.jpg)'"></div>
+       </div> -->
+
+
+       
+       <div>
+        <ion-col size="6" >
+          <div class="user-back" id="popover-button-complain" [style.backgroundImage]="'url(assets/img/profile3.jpg)'">
+           <ion-popover trigger="popover-button-complain" [dismissOnSelect]="true">
+              <ng-template>
+                <ion-content>
+                  <ion-list>
+                    <!-- <ion-item [button]="true" [detail]="false" >Settings</ion-item>      -->
+                    <ion-item [button]="true" [detail]="false" (click)="password()">Password</ion-item>
+                    <!-- <ion-item [button]="true" [detail]="false" (click)="logout()">Logout <ion-icon name="log-out-outline" slot="end"> </ion-icon></ion-item> -->
+                 
+
+                  </ion-list> 
+                </ion-content> 
+              </ng-template>
+            </ion-popover> 
+          </div>
+        </ion-col>
+
+        
+      </div>
+   </div>
+
+
+
+       <div class="content-div animated bounceInUp" > 
+
+        <ion-label class="hello-lbl">Hello Admin !</ion-label>
+
+        <ion-grid fixed>
+
+          <ion-row>
+
+
+
+            <ion-col size="6" *ngFor="let details of data">
+           <div class="col-div">      <!-- id="popover-button-{{details.id}}" -->
+                <img src="assets/img/user.jpg">
+                <ion-label class="hello-lbl">Total Users</ion-label>
+                <ion-label class="hello-lbl" >{{details.Total_users}}</ion-label>
+                <!-- <ion-popover trigger="popover-button-{{details.id}}" [dismissOnSelect]="true">
+                  <ng-template>
+                    <ion-content>
+                      <ion-list>
+                        <ion-item [button]="true" [detail]="false" (click)="user()">Add</ion-item>
+                        <ion-item [button]="true" [detail]="false" (click)="userEdit()">Edit</ion-item>
+                      </ion-list>
+                    </ion-content>
+                  </ng-template>
+                </ion-popover>-->
+
+              </div>
+            </ion-col> 
+
+  <ion-col size="6" *ngFor="let details of data">
+ <div class="col-div" >                                   <!-- id="popover-button-customers-{{details.id}}" -->
+    <img src="assets/img/red.jpg">
+    <ion-label class="hello-lbl">Total Vehicle</ion-label>
+    <ion-label class="hello-lbl" >{{details.Total_vehicle}}</ion-label>
+    <!-- <ion-popover trigger="popover-button-customers-{{details.id}}" [dismissOnSelect]="true">
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [button]="true" [detail]="false" (click)="addVehicle()">Add</ion-item>
+            <ion-item [button]="true" [detail]="false" (click)="editVehicle()">Edit</ion-item>
+            <ion-item [button]="true" [detail]="false" (click)="listVehicle()">List</ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>-->
+  </div>
+</ion-col> 
+
+
+          <ion-col size="6" *ngFor="let details of data">
+          <div class="col-div" >        <!--  id="popover-button-product-{{details.id}}" -->
+              <img src="assets/img/product1.jpg">
+              <ion-label class="hello-lbl">Total Product</ion-label>
+              <ion-label  class="hello-lbl" >{{details.Total_product}}</ion-label>
+              <!-- <ion-popover trigger="popover-button-product-{{details.id}}" [dismissOnSelect]="true">
+                <ng-template>
+                  <ion-content>
+                    <ion-list>
+                            
+                      <ion-item [button]="true" [detail]="false" (click)="addproduct()">Add</ion-item>
+                      <ion-item [button]="true" [detail]="false" (click)="editproduct()">Edit</ion-item>
+                      <ion-item [button]="true" [detail]="false" (click)="listproduct()">List</ion-item>
+                    </ion-list>
+                  </ion-content>
+                </ng-template>
+              </ion-popover> -->
+            </div>
+          </ion-col>
+
+          <ion-col size="6" *ngFor="let details of data">
+            <div class="col-div" >    <!-- id="popover-button-customer-{{details.id}}" -->
+              <img src="assets/img/customer.jpg">
+              <ion-label class="hello-lbl">Total Customers</ion-label>
+              <ion-label class="hello-lbl" >{{details.Total_customers}}</ion-label>
+              <!-- <ion-popover trigger="popover-button-customer-{{details.id}}" [dismissOnSelect]="true">
+                <ng-template>
+                  <ion-content>
+                    <ion-list>
+                            
+                      <ion-item [button]="true" [detail]="false" (click)="addcustomer()">Add</ion-item>
+                      <ion-item [button]="true" [detail]="false" (click)="editcustomer()">Edit</ion-item>
+                      <ion-item [button]="true" [detail]="false" (click)="listcustomer()">List</ion-item>
+                    </ion-list>
+                  </ion-content>
+                </ng-template>
+              </ion-popover> -->
+            </div>
+          </ion-col>
+
+
+
+          
+          <ion-col size="6" *ngFor="let details of data">
+          <div class="col-div" >      <!--  id="popover-button-complain-{{details.id}}" -->
+              <img src="assets/img/complain.jpg">
+              <ion-label class="hello-lbl">Total Complaint</ion-label>
+              <ion-label class="hello-lbl">{{details.Total_complaint}}</ion-label>
+              <!-- <ion-popover trigger="popover-button-complain-{{details.id}}" [dismissOnSelect]="true">
+                <ng-template>
+                  <ion-content>
+                    <ion-list>
+                            
+                      <ion-item [button]="true" [detail]="false" (click)="addcomplain()">Add</ion-item>
+                      <ion-item [button]="true" [detail]="false" (click)="editcomplain()">Edit</ion-item>
+                      <ion-item [button]="true" [detail]="false" (click)="listcomplain()">List</ion-item>
+                    </ion-list>
+                  </ion-content>
+                </ng-template>
+              </ion-popover> -->
+            </div>
+          </ion-col>
+
+        
+          <ion-col size="6" *ngFor="let details of data">
+            <div class="col-div">                                           <!-- id="popover-button-services-{{details.id}}"  -->
+              <img src="assets/img/service.jpg">
+              <ion-label class="hello-lbl">Total Service</ion-label>
+              <ion-label class="hello-lbl">{{details.Total_service}}</ion-label>
+              <!-- <ion-popover trigger="popover-button-services-{{details.id}}" [dismissOnSelect]="true">
+                <ng-template>
+                  <ion-content>
+                    <ion-list>
+                            
+                      <ion-item [button]="true" [detail]="false" (click)="addservice()">Add</ion-item>
+                      <ion-item [button]="true" [detail]="false" (click)="editservice()">Edit</ion-item>
+                   
+                    </ion-list>
+                  </ion-content>
+                </ng-template>
+              </ion-popover> -->
+            </div>
+          </ion-col>
+    
+          </ion-row>
+
+        </ion-grid>
+
+       </div>
+      </div>
+      
+    </ion-content>
+<!--     
+</div>
+</div> -->
+
+
+
